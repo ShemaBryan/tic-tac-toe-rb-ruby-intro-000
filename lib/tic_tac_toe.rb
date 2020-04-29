@@ -25,7 +25,7 @@ def move(board, index, player)
    board[index] = player
 end
 
-def position_taken?(board, index, player)
+def position_taken?(board, index)
    if (board[index] == " ") || (board[index] == "") || (board[index] == nil)
       return false
    else
@@ -68,7 +68,7 @@ def won?(board)
   board[win_combination[1]] == board[win_combination[2]] &&
   position_taken?(board, win_combination[0])
  end
-
+end
 def full?(board)
    board.all? {|i| i == "X" || i == "O"}
 end
